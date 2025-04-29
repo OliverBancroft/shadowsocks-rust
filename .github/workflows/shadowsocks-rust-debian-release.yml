@@ -27,9 +27,9 @@ jobs:
         with:
           targets: x86_64-unknown-linux-gnu
       
-      - name: Build with features
+      - name: Build with all required features
         run: |
-          cargo build --release --features hickory-dns,aead-cipher-2022,dns-over-https
+          cargo build --release --features logging,hickory-dns,local,server,multi-threaded,aead-cipher,aead-cipher-2022,dns-over-https
       
       - name: Package
         run: |
